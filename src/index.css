@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Press+Start+2P&family=Rajdhani:wght@500;600;700&display=swap');
+
+:root {
+  font-family: 'DM Mono', monospace;
+  color: #ececf4;
+  background: #101114;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --background: #101114;
+  --panel: #191a1e;
+  --panel-raised: #1d1e23;
+  --border: #34353d;
+  --text: #ececf4;
+  --muted: #92939f;
+  --blue: #39a7ff;
+  --cyan: #31d9f4;
+  --purple: #c65aff;
+  --green: #64e995;
+  --display: 'Rajdhani', 'Arial Narrow', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 50% 0, rgb(44 50 71 / 18%), transparent 48rem),
+    var(--background);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  color: #fff;
+  background: #5727a0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+}
