@@ -461,16 +461,16 @@
 .crate-key-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  width: min(100%, 752px);
+  gap: 20px;
+  width: min(100%, 900px);
   margin: 0 auto;
 }
 
 .crate-key-card {
   display: flex;
-  min-height: 294px;
+  min-height: 360px;
   flex-direction: column;
-  padding: 14px 16px 16px;
+  padding: 18px;
   border: 1px solid #34353d;
   border-radius: 13px;
   background:
@@ -487,20 +487,20 @@
 
 .crate-key-art {
   display: grid;
-  min-height: 171px;
+  min-height: 212px;
   flex: 1 1 auto;
   place-items: center;
 }
 
 .crate-key-icon {
   display: block;
-  overflow: visible;
-  filter: drop-shadow(0 8px 8px rgb(0 0 0 / 38%));
+  object-fit: contain;
+  filter: drop-shadow(0 8px 8px rgb(0 0 0 / 35%));
 }
 
 .crate-key-medium {
-  width: min(176px, 92%);
-  height: 122px;
+  width: min(240px, 100%);
+  height: 204px;
 }
 
 .crate-key-small {
@@ -508,58 +508,20 @@
   height: 45px;
 }
 
-.key-shaft {
-  stroke-width: 4.5;
-}
-
-.key-ring {
-  stroke-width: 3.5;
-}
-
-.key-teeth {
-  stroke-width: 5;
-}
-
-.key-shadow {
-  stroke: #111216;
-  stroke-width: 10;
-}
-
-.key-body {
-  filter: drop-shadow(0 0 2px color-mix(in srgb, currentColor, transparent 48%));
-}
-
-.key-glints {
-  stroke: #fff;
-  stroke-width: 1.5;
-  opacity: 0.78;
-}
-
-.key-hole {
-  fill: #17181c;
-  stroke: currentColor;
-  stroke-width: 2;
-}
-
-.key-end {
-  fill: currentColor;
-  stroke: #111216;
-  stroke-width: 2;
-}
-
 .crate-key-card h3 {
-  margin: 0 0 3px;
-  color: #f0eff5;
+  margin: 0 0 5px;
+  color: #f2f1f7;
   font-family: 'Press Start 2P', var(--display);
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .crate-key-card > p {
-  margin: 0 0 9px;
-  color: #92939f;
-  font-size: 8px;
+  margin: 0 0 11px;
+  color: #c1c2cb;
+  font-size: 10px;
+  line-height: 1.5;
 }
 
 .crate-key-bottom {
@@ -586,25 +548,26 @@
 .crate-key-price strong {
   color: #55b4ff;
   font-family: 'Press Start 2P', var(--display);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   white-space: nowrap;
 }
 
 .crate-key-price span {
-  color: #858692;
-  font-size: 6px;
+  color: #b0b1bc;
+  font-size: 8px;
+  letter-spacing: 0.05em;
 }
 
 .crate-key-actions > button {
-  min-height: 28px;
-  padding: 0 8px;
+  min-height: 32px;
+  padding: 0 7px;
   border: 1px solid #2877aa;
   border-radius: 5px;
-  color: #67c3ff;
+  color: #8bd1ff;
   background: #17212a;
   font-family: 'Press Start 2P', var(--display);
-  font-size: 6px;
+  font-size: 7px;
   font-weight: 700;
   white-space: nowrap;
   cursor: pointer;
@@ -618,7 +581,7 @@
 
 .key-quantity-control {
   display: inline-flex;
-  min-height: 28px;
+  min-height: 32px;
   align-items: center;
   gap: 0;
   border: 1px solid #3b3c43;
@@ -627,12 +590,12 @@
 }
 
 .key-quantity-control button {
-  width: 18px;
-  height: 26px;
+  width: 23px;
+  height: 30px;
   border: 0;
   color: #b9dfff;
   background: transparent;
-  font-size: 14px;
+  font-size: 17px;
   cursor: pointer;
 }
 
@@ -642,8 +605,8 @@
 }
 
 .key-quantity-control span {
-  min-width: 14px;
-  font-size: 9px;
+  min-width: 17px;
+  font-size: 11px;
   text-align: center;
 }
 
@@ -682,12 +645,12 @@
   z-index: 2;
   top: 9px;
   right: 9px;
-  padding: 4px 7px;
+  padding: 5px 8px;
   border: 1px solid #34734a;
   border-radius: 4px;
   color: #b7ffca;
   background: #12351f;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
   white-space: nowrap;
 }
@@ -866,12 +829,15 @@
   text-decoration: none;
 }
 
-.footer-secret-message {
+.store-footer .footer-secret-message {
   color: #9295a1;
+  font-size: 11px;
 }
 
-.footer-secret-message strong {
+.store-footer .footer-secret-message strong {
   color: #72bcff;
+  font-size: 15px;
+  letter-spacing: 0.08em;
 }
 
 .store-footer p {
@@ -2006,31 +1972,35 @@
   }
 
   .crate-key-card {
-    min-height: 280px;
+    min-height: 320px;
     padding: 9px;
   }
 
   .crate-key-art {
-    min-height: 125px;
+    min-height: 150px;
   }
 
   .crate-key-medium {
-    width: min(150px, 100%);
-    height: 105px;
+    width: min(160px, 100%);
+    height: 140px;
   }
 
   .crate-key-card h3 {
-    font-size: 7px;
+    font-size: 9px;
   }
 
   .crate-key-card > p {
-    min-height: 24px;
-    font-size: 7px;
+    min-height: 26px;
+    font-size: 8px;
     line-height: 1.5;
   }
 
   .crate-key-price strong {
-    font-size: 8px;
+    font-size: 9px;
+  }
+
+  .crate-key-price span {
+    font-size: 7px;
   }
 
   .crate-key-bottom {
@@ -2051,9 +2021,9 @@
 
   .crate-key-actions > button {
     flex: 1;
-    min-height: 29px;
-    padding: 0 5px;
-    font-size: 5px;
+    min-height: 30px;
+    padding: 0 7px;
+    font-size: 6px;
   }
 
   .key-quantity-control button {

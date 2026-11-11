@@ -23,14 +23,14 @@ const termsSections = [
   {
     title: '4. Store items and payments',
     paragraphs: [
-      'The store currently displays example items and prices. Checkout is not active, and this site does not currently accept payments or deliver purchases. Do not treat adding an item to the basket as an order.',
-      'If paid purchases are enabled in the future, the checkout will show the final price, currency, item details, and any recurring subscription terms before you confirm. Digital items such as ranks, shards, and crate keys are for use on QwerySMP only and are not real-world currency.',
+      'The store currently displays example items and prices. Checkout is not active: this website does not accept or process payments, create orders, or deliver purchases. Adding an item to the basket does not place an order.',
+      'If purchases are enabled, the checkout will show the item, total price and currency before you confirm. Any recurring rank, renewal amount, billing period, and cancellation instructions will also be shown before a subscription is started. Digital items such as ranks, shards, and crate keys are for use on QwerySMP only and have no real-world value.',
     ],
   },
   {
     title: '5. Cancellations and consumer rights',
     paragraphs: [
-      'When purchases become available, cancellation, refund, and withdrawal rights will be explained at checkout and handled in accordance with applicable consumer-protection laws. Nothing in these terms removes rights that cannot legally be excluded. Contact QwerySMP support if you have a question about a future order.',
+      'When purchases become available, the applicable cancellation, refund, and withdrawal terms will be shown before you buy and handled in accordance with consumer-protection laws that apply to you. Nothing in these terms removes rights that cannot legally be excluded. For order questions, use the Support page to join our Discord and open a ticket.',
     ],
   },
   {
@@ -54,7 +54,7 @@ const termsSections = [
   {
     title: '9. Updates and contact',
     paragraphs: [
-      'We may update these terms as the server and store develop. The current version will be posted on this page with its latest update date. For questions, contact the QwerySMP staff through the server’s official support channels.',
+      'We may update these terms as the server and store develop. The current version will be posted on this page with its latest update date. For questions, use the Support page to join our Discord and open a ticket.',
     ],
   },
 ]
@@ -78,10 +78,13 @@ function TermsOfService() {
         <p className="terms-kicker">QWERY SMP · STORE POLICIES</p>
         <h1>Terms of Service</h1>
         <p className="terms-updated">Last updated: 11 November 2026</p>
+        <p className="terms-intro">
+          These terms explain the rules for using the QwerySMP server, website, and store.
+        </p>
 
         <p className="terms-notice" role="note">
-          <strong>Store status:</strong> Checkout is not active yet. No payments are
-          accepted and no purchases are being processed through this website.
+          <strong>Store status:</strong> Checkout is not active. No payments, orders, or
+          in-game deliveries are being processed through this website.
         </p>
 
         <div className="terms-content">
@@ -102,6 +105,7 @@ function TermsOfService() {
 
       <footer className="terms-footer">
         <a href="/">QwerySMP Store</a>
+        <a href="/?page=support">Support</a>
         <span>Not affiliated with Mojang or Microsoft.</span>
       </footer>
     </div>

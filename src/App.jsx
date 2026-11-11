@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import TermsOfService from './TermsOfService.jsx'
+import SupportPage from './Support.jsx'
 import './App.css'
 
 const ranks = [
@@ -18,11 +19,11 @@ const shardPacks = [
 ]
 
 const crateKeys = [
-  { id: 'key-common', name: 'Common Key', price: 2.99, color: '#91df18', description: 'Receive one Common crate key.' },
-  { id: 'key-prime', name: 'Prime Key', price: 4.99, color: '#44b8ff', description: 'Receive one Prime crate key.' },
-  { id: 'key-crimson', name: 'Crimson Key', price: 6.99, color: '#ff4747', description: 'Receive one Crimson crate key.' },
-  { id: 'key-gold', name: 'Gold Key', price: 8.99, color: '#ffd331', description: 'Receive one Gold crate key.' },
-  { id: 'key-amethyst', name: 'Amethyst Key', price: 10.99, color: '#c56aff', description: 'Receive one Amethyst crate key.' },
+  { id: 'key-common', name: 'Common Key', price: 2.99, color: '#91df18', image: '/keys/common-key.png?v=5', description: 'Receive one Common crate key.' },
+  { id: 'key-prime', name: 'Prime Key', price: 4.99, color: '#44b8ff', image: '/keys/prime-key.png?v=5', description: 'Receive one Prime crate key.' },
+  { id: 'key-crimson', name: 'Crimson Key', price: 6.99, color: '#ff4747', image: '/keys/crimson-key.png?v=6', description: 'Receive one Crimson crate key.' },
+  { id: 'key-gold', name: 'Gold Key', price: 8.99, color: '#ffd331', image: '/keys/gold-key.png?v=5', description: 'Receive one Gold crate key.' },
+  { id: 'key-amethyst', name: 'Amethyst Key', price: 10.99, color: '#c56aff', image: '/keys/amethyst-key.png?v=5', description: 'Receive one Amethyst crate key.' },
 ]
 
 const formatPrice = (price) =>
@@ -34,40 +35,8 @@ function getLineTotal(item, quantity = item.quantity) {
   return (priceInCents * quantity + extraKeyCents) / 100
 }
 
-function CrateKeyIcon({ color, size = 'medium' }) {
-  return (
-    <svg
-      className={`crate-key-icon crate-key-${size}`}
-      viewBox="0 0 160 110"
-      role="img"
-      aria-label="Crate key"
-      style={{ color }}
-    >
-      <g className="key-shadow" fill="none" strokeLinecap="round" strokeLinejoin="round">
-        <path d="m31 83 77-54" />
-        <circle cx="119" cy="27" r="13" />
-        <circle cx="137" cy="27" r="13" />
-        <circle cx="128" cy="12" r="12" />
-        <circle cx="128" cy="42" r="12" />
-        <path d="m24 87 13 13 10-10 7 7 9-9-13-13" />
-      </g>
-      <g className="key-body" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-        <path className="key-shaft" d="m31 80 77-54" />
-        <circle className="key-ring" cx="119" cy="25" r="13" />
-        <circle className="key-ring" cx="137" cy="25" r="13" />
-        <circle className="key-ring" cx="128" cy="10" r="12" />
-        <circle className="key-ring" cx="128" cy="40" r="12" />
-        <path className="key-teeth" d="m24 84 13 13 10-10 7 7 9-9-13-13" />
-      </g>
-      <g className="key-glints" fill="none" strokeLinecap="round" strokeLinejoin="round">
-        <path d="m38 75 58-41" />
-        <path d="M119 18a8 8 0 0 1 11-2" />
-        <path d="m28 84 8 8" />
-      </g>
-      <circle className="key-hole" cx="128" cy="25" r="5" />
-      <circle className="key-end" cx="30" cy="82" r="4" />
-    </svg>
-  )
+function CrateKeyIcon({ image, name, size = 'medium' }) {
+  return <img className={`crate-key-icon crate-key-${size}`} src={image} alt={name} />
 }
 
 function CrystalIcon({ size = 'medium' }) {
@@ -270,7 +239,7 @@ function CheckoutFlow({
                 <article className="review-item" key={item.id}>
                   <div className="review-item-icon">
                     {item.type === 'key'
-                      ? <CrateKeyIcon color={item.color} size="small" />
+                      ? <CrateKeyIcon image={item.image} name={item.name} size="small" />
                       : <CrystalIcon size="small" />}
                   </div>
                   <div className="review-item-description">
@@ -350,7 +319,7 @@ function CheckoutFlow({
 
               <label className="terms-consent">
                 <input type="checkbox" checked={acceptedTerms} onChange={(event) => setAcceptedTerms(event.target.checked)} required />
-                <span>I agree to the <a href="/terms-of-service" target="_blank" rel="noreferrer">Terms of Service</a>.</span>
+                <span>I agree to the <a href="/?page=terms-of-service" target="_blank" rel="noreferrer">Terms of Service</a>.</span>
               </label>
 
               {paymentNotice && <p className="payment-notice" role="status">{paymentNotice}</p>}
@@ -524,7 +493,7 @@ function Storefront() {
                 style={{ '--key-color': key.color }}
               >
                 <div className="crate-key-art">
-                  <CrateKeyIcon color={key.color} />
+                  <CrateKeyIcon image={key.image} name={key.name} />
                 </div>
                 <h3>{key.name}</h3>
                 <p>{key.description}</p>
@@ -588,8 +557,8 @@ function Storefront() {
         </div>
         <p>Not affiliated with Mojang or Microsoft.</p>
         <nav aria-label="Footer links">
-          <a href="https://qwerysmp.xyz">Support</a>
-          <a href="/terms-of-service">Terms of service</a>
+          <a href="/?page=support">Support</a>
+          <a href="/?page=terms-of-service">Terms of service</a>
         </nav>
       </footer>
 
@@ -611,7 +580,7 @@ function Storefront() {
                       <div className="cart-item" key={productId}>
                         <div className="cart-item-art">
                           {item.type === 'key'
-                            ? <CrateKeyIcon color={item.color} size="small" />
+                            ? <CrateKeyIcon image={item.image} name={item.name} size="small" />
                             : item.type === 'rank'
                               ? <img className="qwery-rank-icon" src="/qs-rank-icon.png" alt="QwerySMP QS logo" />
                             : <CrystalIcon size="small" />}
@@ -658,9 +627,11 @@ function Storefront() {
 }
 
 function App() {
-  return window.location.pathname.replace(/\/+$/, '') === '/terms-of-service'
-    ? <TermsOfService />
-    : <Storefront />
+  const path = window.location.pathname.replace(/\/+$/, '')
+  const page = new URLSearchParams(window.location.search).get('page')
+  if (path === '/terms-of-service' || page === 'terms-of-service') return <TermsOfService />
+  if (path === '/support' || page === 'support') return <SupportPage />
+  return <Storefront />
 }
 
 export default App
