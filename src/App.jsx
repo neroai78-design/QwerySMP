@@ -4,7 +4,7 @@ import './App.css'
 
 const ranks = [
   { id: 'qwery-plus', name: 'Qwery+', price: 4.99, homes: 5, shardsPerSecond: 2 },
-  { id: 'qwery-plus-plus', name: 'Qwery++', price: 9.99, homes: 10, shardsPerSecond: 4 },
+  { id: 'qwery-plus-plus', name: 'Qwery++', price: 9.99, homes: 10, shardsPerSecond: 3 },
   { id: 'qwery-plus-plus-plus', name: 'Qwery+++', price: 14.99, homes: 15, shardsPerSecond: 5, key: 'Amethyst Key', bestValue: true },
 ]
 
@@ -487,7 +487,7 @@ function Storefront() {
             {ranks.map((rank) => (
               <article className={`rank-card${rank.bestValue ? ' rank-card-best-value' : ''}`} key={rank.id}>
                 <div className="rank-card-heading">
-                  <h3>{rank.name.replace(/\+$/, '')}<span>{rank.name.match(/\+$/)?.[0]}</span></h3>
+                  <h3>{rank.name.replace(/\++$/, '')}<span>{rank.name.match(/\++$/)?.[0]}</span></h3>
                   {rank.bestValue && <span className="rank-tag">BEST VALUE</span>}
                 </div>
                 <ul className="rank-perks">
@@ -499,7 +499,12 @@ function Storefront() {
                   </li>
                 </ul>
                 <button type="button" className="purchase-button" onClick={() => addToCart(rank.id)}>
-                  <strong>{formatPrice(rank.price)}</strong><span>EUR</span><em>/month</em>
+                  <span className="rank-price-display">
+                    <span className="rank-price-main">
+                      <strong>{formatPrice(rank.price)}</strong><span>EUR</span><em>/month</em>
+                    </span>
+                    <del>{formatPrice(rank.price + 10)}</del>
+                  </span>
                 </button>
               </article>
             ))}
@@ -577,7 +582,10 @@ function Storefront() {
       </main>
 
       <footer className="store-footer">
-        <a className="footer-brand" href="#">QwerySMP</a>
+        <div className="footer-secret">
+          <a className="footer-brand" href="#">QwerySMP</a>
+          <p className="footer-secret-message">Discount Code <strong>QWERY</strong> for 10%</p>
+        </div>
         <p>Not affiliated with Mojang or Microsoft.</p>
         <nav aria-label="Footer links">
           <a href="https://qwerysmp.xyz">Support</a>
@@ -604,6 +612,8 @@ function Storefront() {
                         <div className="cart-item-art">
                           {item.type === 'key'
                             ? <CrateKeyIcon color={item.color} size="small" />
+                            : item.type === 'rank'
+                              ? <img className="qwery-rank-icon" src="/qs-rank-icon.png" alt="QwerySMP QS logo" />
                             : <CrystalIcon size="small" />}
                         </div>
                         <div className="cart-item-info">

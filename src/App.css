@@ -367,10 +367,11 @@
 .purchase-button {
   display: inline-flex;
   width: 100%;
-  min-height: 42px;
+  min-height: 64px;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 0;
   margin-top: auto;
   padding: 0 8px;
   border: 1px solid #31506a;
@@ -382,10 +383,33 @@
   transition: background 150ms ease, border-color 150ms ease;
 }
 
-.purchase-button strong {
+.rank-price-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.rank-price-main {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 5px;
+}
+
+.purchase-button .rank-price-main strong {
   color: #58a8ff;
   font-family: 'Press Start 2P', var(--display);
   font-size: 10px;
+}
+
+.purchase-button .rank-price-display > del {
+  align-self: flex-start;
+  color: #9699a3;
+  font-family: 'Press Start 2P', var(--display);
+  font-size: 9px;
+  text-decoration-thickness: 1px;
 }
 
 .purchase-button span {
@@ -471,12 +495,12 @@
 .crate-key-icon {
   display: block;
   overflow: visible;
-  filter: drop-shadow(0 0 5px currentColor) drop-shadow(0 5px 10px color-mix(in srgb, currentColor, transparent 75%));
+  filter: drop-shadow(0 8px 8px rgb(0 0 0 / 38%));
 }
 
 .crate-key-medium {
-  width: min(190px, 95%);
-  height: 132px;
+  width: min(176px, 92%);
+  height: 122px;
 }
 
 .crate-key-small {
@@ -485,30 +509,30 @@
 }
 
 .key-shaft {
-  stroke-width: 5;
+  stroke-width: 4.5;
 }
 
 .key-ring {
-  stroke-width: 4;
+  stroke-width: 3.5;
 }
 
 .key-teeth {
-  stroke-width: 6;
+  stroke-width: 5;
 }
 
 .key-shadow {
   stroke: #111216;
-  stroke-width: 11;
+  stroke-width: 10;
 }
 
 .key-body {
-  filter: drop-shadow(0 0 2px currentColor);
+  filter: drop-shadow(0 0 2px color-mix(in srgb, currentColor, transparent 48%));
 }
 
 .key-glints {
   stroke: #fff;
-  stroke-width: 2;
-  opacity: 0.66;
+  stroke-width: 1.5;
+  opacity: 0.78;
 }
 
 .key-hole {
@@ -655,17 +679,17 @@
 
 .bonus-tag {
   position: absolute;
-  z-index: 1;
-  top: 10px;
-  left: 50%;
-  padding: 3px 6px;
-  border-radius: 2px;
-  color: #91ffb4;
-  background: #124624;
-  font-size: 7px;
-  font-weight: 500;
+  z-index: 2;
+  top: 9px;
+  right: 9px;
+  padding: 4px 7px;
+  border: 1px solid #34734a;
+  border-radius: 4px;
+  color: #b7ffca;
+  background: #12351f;
+  font-size: 8px;
+  font-weight: 700;
   white-space: nowrap;
-  transform: translateX(-50%);
 }
 
 .shard-art {
@@ -673,8 +697,9 @@
   z-index: 0;
   display: grid;
   width: 100%;
-  height: 90px;
-  flex: 1 1 auto;
+  height: 82px;
+  flex: 0 0 82px;
+  padding-top: 10px;
   place-items: center;
   filter: drop-shadow(0 5px 10px rgb(160 45 255 / 20%));
 }
@@ -686,12 +711,12 @@
 
 .crystal-medium {
   width: min(118px, 88%);
-  height: 80px;
+  height: 68px;
 }
 
 .crystal-large {
-  width: min(138px, 96%);
-  height: 88px;
+  width: min(128px, 92%);
+  height: 72px;
 }
 
 .crystal-small {
@@ -761,7 +786,9 @@
 }
 
 .shard-card h3 {
-  margin: 0 0 10px;
+  margin: 0 0 8px;
+  position: relative;
+  z-index: 1;
   color: #d875ff;
   font-family: var(--display);
   font-size: 18px;
@@ -825,12 +852,26 @@
   text-align: center;
 }
 
+.footer-secret {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .footer-brand {
   color: #ebebf2;
   font-family: var(--display);
   font-size: 18px;
   font-weight: 700;
   text-decoration: none;
+}
+
+.footer-secret-message {
+  color: #9295a1;
+}
+
+.footer-secret-message strong {
+  color: #72bcff;
 }
 
 .store-footer p {
@@ -1367,6 +1408,12 @@
   height: auto;
   max-height: 38px;
   overflow: hidden;
+}
+
+.cart-item-art > .qwery-rank-icon {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
 }
 
 .review-item-description,
@@ -2019,17 +2066,19 @@
   }
 
   .shard-art {
-    height: 78px;
+    height: 70px;
+    flex-basis: 70px;
+    padding-top: 8px;
   }
 
   .crystal-medium {
     width: min(110px, 95%);
-    height: 72px;
+    height: 58px;
   }
 
   .crystal-large {
-    width: min(122px, 98%);
-    height: 78px;
+    width: min(116px, 94%);
+    height: 64px;
   }
 
   .shard-card h3 {
