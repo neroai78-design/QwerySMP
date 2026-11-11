@@ -4,9 +4,7 @@ import SupportPage from './Support.jsx'
 import './App.css'
 
 const ranks = [
-  { id: 'qwery-plus', name: 'Qwery+', price: 4.99, homes: 5, shardsPerSecond: 2 },
-  { id: 'qwery-plus-plus', name: 'Qwery++', price: 9.99, homes: 10, shardsPerSecond: 3 },
-  { id: 'qwery-plus-plus-plus', name: 'Qwery+++', price: 14.99, homes: 15, shardsPerSecond: 5, key: 'Amethyst Key', bestValue: true },
+  { id: 'qwery-plus', name: 'Qwery+', price: 9.99, originalPrice: 14.99, homes: 5, shardsPerSecond: 2, key: '1 Amethyst Key' },
 ]
 
 const shardPacks = [
@@ -140,7 +138,9 @@ function CheckoutFlow({
   }
 
   function itemDisplayName(item) {
-    if (item.type === 'rank') return `${item.name} (30 days)`
+    if (item.type === 'rank') {
+      return `${item.name} (30 days)${item.key ? ` · Includes ${item.key}` : ''}`
+    }
     if (item.type === 'key') return item.name
     return item.name
   }
@@ -452,7 +452,7 @@ function Storefront() {
             <h2 id="ranks-title">Ranks</h2>
             <p>Find your next upgrade.</p>
           </div>
-          <div className="rank-grid">
+          <div className={`rank-grid${ranks.length === 1 ? ' rank-grid-single' : ''}`}>
             {ranks.map((rank) => (
               <article className={`rank-card${rank.bestValue ? ' rank-card-best-value' : ''}`} key={rank.id}>
                 <div className="rank-card-heading">
@@ -460,19 +460,17 @@ function Storefront() {
                   {rank.bestValue && <span className="rank-tag">BEST VALUE</span>}
                 </div>
                 <ul className="rank-perks">
+                  <li><span>Rank included</span><strong>{rank.name}</strong></li>
                   <li><span>Homes</span><strong>{rank.homes}</strong></li>
                   <li><span>Shard generation</span><strong><span className="perk-highlight">{rank.shardsPerSecond} shards</span> / second</strong></li>
-                  <li>
-                    <span>{rank.key ? 'Included key' : 'Rank'}</span>
-                    <strong className={rank.key ? 'perk-highlight' : ''}>{rank.key || 'Included'}</strong>
-                  </li>
+                  {rank.key && <li><span>Included key</span><strong className="perk-highlight">{rank.key}</strong></li>}
                 </ul>
                 <button type="button" className="purchase-button" onClick={() => addToCart(rank.id)}>
                   <span className="rank-price-display">
                     <span className="rank-price-main">
                       <strong>{formatPrice(rank.price)}</strong><span>EUR</span><em>/month</em>
                     </span>
-                    <del>{formatPrice(rank.price + 10)}</del>
+                    <del>{formatPrice(rank.originalPrice)}</del>
                   </span>
                 </button>
               </article>
@@ -588,6 +586,7 @@ function Storefront() {
                         <div className="cart-item-info">
                           <h3>{item.name}</h3>
                           <p>{formatPrice(item.price)}{item.period ? ' / month' : ''}</p>
+                          {item.key && <p className="cart-item-included">Includes {item.key}</p>}
                           <div className="quantity-control">
                             <button type="button" aria-label={`Remove one ${item.name}`} onClick={() => updateQuantity(productId, -1)}>−</button>
                             <span>{item.quantity}</span>

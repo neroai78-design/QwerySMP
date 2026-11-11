@@ -25,7 +25,7 @@
   gap: 8px;
   color: #f5f5fa;
   font-family: var(--display);
-  font-size: 19px;
+  font-size: 24px;
   font-weight: 700;
   letter-spacing: 0.045em;
   text-decoration: none;
@@ -55,7 +55,7 @@
   border-radius: 5px;
   color: #c4c5d0;
   background: #17181c;
-  font-size: 10px;
+  font-size: 12px;
   cursor: pointer;
 }
 
@@ -81,7 +81,7 @@
   border-radius: 4px;
   color: var(--muted);
   background: #222329;
-  font-size: 9px;
+  font-size: 11px;
   opacity: 0;
   pointer-events: none;
   transform: translate(-50%, -3px);
@@ -104,7 +104,7 @@
   border-radius: 5px;
   color: #d7d7e1;
   background: #191a1e;
-  font-size: 10px;
+  font-size: 12px;
   cursor: pointer;
   transition: border-color 150ms ease, color 150ms ease;
 }
@@ -133,7 +133,7 @@
   border-radius: 10px;
   color: #b7e6ff;
   background: #173a53;
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .store-main {
@@ -173,7 +173,7 @@
   gap: 7px;
   margin: 0 0 2px;
   color: #9c9eaa;
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 0.11em;
 }
 
@@ -186,7 +186,7 @@
   margin: 0;
   color: #f4f4f7;
   font-family: var(--display);
-  font-size: 35px;
+  font-size: 44px;
   font-weight: 700;
   letter-spacing: 0.025em;
   line-height: 1.12;
@@ -195,7 +195,7 @@
 .intro-subtitle {
   margin: 1px 0 3px;
   color: #a4a5b0;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .join-address {
@@ -203,7 +203,7 @@
   border: 0;
   color: #4b9fff;
   background: transparent;
-  font-size: 9px;
+  font-size: 11px;
   cursor: pointer;
 }
 
@@ -226,7 +226,7 @@
   margin: 0;
   color: #f1f0f8;
   font-family: var(--display);
-  font-size: 17px;
+  font-size: 21px;
   font-weight: 700;
   letter-spacing: 0.025em;
 }
@@ -234,13 +234,18 @@
 .section-title-row p {
   margin: 0;
   color: #a0a1ac;
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .rank-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
+}
+
+.rank-grid-single {
+  grid-template-columns: minmax(0, 420px);
+  justify-content: center;
 }
 
 .rank-card {
@@ -278,14 +283,14 @@
 .card-overline {
   margin: 0 0 1px;
   color: #888a98;
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .rank-card h3 {
   margin: 0;
   color: #f3f4fa;
   font-family: 'Press Start 2P', var(--display);
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 1.6;
 }
@@ -300,7 +305,7 @@
   border: 1px solid #315c7c;
   border-radius: 3px;
   color: #76caff;
-  font-size: 7px;
+  font-size: 9px;
   letter-spacing: 0.06em;
   white-space: nowrap;
 }
@@ -320,7 +325,7 @@
   gap: 10px;
   border-bottom: 1px solid #303138;
   color: #a5a6b0;
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .rank-perks li:last-child {
@@ -329,7 +334,7 @@
 
 .rank-perks strong {
   color: #e6e7ed;
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 500;
   text-align: right;
 }
@@ -355,13 +360,13 @@
 .rank-price strong {
   color: #58aeff;
   font-family: var(--display);
-  font-size: 21px;
+  font-size: 26px;
   font-weight: 700;
 }
 
 .rank-price span {
   color: #9fa0aa;
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .purchase-button {
@@ -378,7 +383,7 @@
   border-radius: 5px;
   color: #e5f4ff;
   background: #20252a;
-  font-size: 9px;
+  font-size: 11px;
   cursor: pointer;
   transition: background 150ms ease, border-color 150ms ease;
 }
@@ -401,26 +406,26 @@
 .purchase-button .rank-price-main strong {
   color: #58a8ff;
   font-family: 'Press Start 2P', var(--display);
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .purchase-button .rank-price-display > del {
   align-self: flex-start;
   color: #9699a3;
   font-family: 'Press Start 2P', var(--display);
-  font-size: 9px;
+  font-size: 11px;
   text-decoration-thickness: 1px;
 }
 
 .purchase-button span {
   color: #8bc7ff;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
 }
 
 .purchase-button em {
   color: #a0a1ac;
-  font-size: 9px;
+  font-size: 11px;
   font-style: normal;
   font-weight: 700;
 }
@@ -444,7 +449,7 @@
 .crate-keys-heading > p {
   margin: 0 0 4px;
   color: #43b8ff;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.13em;
 }
@@ -453,7 +458,7 @@
   margin: 0;
   color: #f2f1f7;
   font-family: 'Press Start 2P', var(--display);
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 1.1;
 }
@@ -512,7 +517,7 @@
   margin: 0 0 5px;
   color: #f2f1f7;
   font-family: 'Press Start 2P', var(--display);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.7;
 }
@@ -520,7 +525,7 @@
 .crate-key-card > p {
   margin: 0 0 11px;
   color: #c1c2cb;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.5;
 }
 
@@ -548,14 +553,14 @@
 .crate-key-price strong {
   color: #55b4ff;
   font-family: 'Press Start 2P', var(--display);
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 700;
   white-space: nowrap;
 }
 
 .crate-key-price span {
   color: #b0b1bc;
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 0.05em;
 }
 
@@ -567,7 +572,7 @@
   color: #8bd1ff;
   background: #17212a;
   font-family: 'Press Start 2P', var(--display);
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 700;
   white-space: nowrap;
   cursor: pointer;
@@ -595,7 +600,7 @@
   border: 0;
   color: #b9dfff;
   background: transparent;
-  font-size: 17px;
+  font-size: 21px;
   cursor: pointer;
 }
 
@@ -606,7 +611,7 @@
 
 .key-quantity-control span {
   min-width: 17px;
-  font-size: 11px;
+  font-size: 14px;
   text-align: center;
 }
 
@@ -650,7 +655,7 @@
   border-radius: 4px;
   color: #b7ffca;
   background: #12351f;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   white-space: nowrap;
 }
@@ -754,14 +759,14 @@
   z-index: 1;
   color: #d875ff;
   font-family: var(--display);
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 700;
   line-height: 1;
   text-shadow: 0 0 12px rgb(177 71 255 / 22%);
 }
 
 .shard-card h3 span {
-  font-size: 15px;
+  font-size: 19px;
 }
 
 .shard-price-button {
@@ -786,20 +791,20 @@
 
 .shard-price-button strong {
   font-family: var(--display);
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 700;
 }
 
 .shard-price-button span {
   color: #a1a1ab;
-  font-size: 7px;
+  font-size: 9px;
 }
 
 .checkout-note {
   margin: 0;
   padding: 0 0 40px;
   color: #737581;
-  font-size: 8px;
+  font-size: 10px;
   text-align: center;
 }
 
@@ -824,25 +829,25 @@
 .footer-brand {
   color: #ebebf2;
   font-family: var(--display);
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 700;
   text-decoration: none;
 }
 
 .store-footer .footer-secret-message {
   color: #9295a1;
-  font-size: 11px;
+  font-size: 14px;
 }
 
 .store-footer .footer-secret-message strong {
   color: #72bcff;
-  font-size: 15px;
+  font-size: 19px;
   letter-spacing: 0.08em;
 }
 
 .store-footer p {
   margin: 0;
-  font-size: 7px;
+  font-size: 9px;
 }
 
 .store-footer nav {
@@ -853,7 +858,7 @@
 
 .store-footer nav a {
   color: #8d8e99;
-  font-size: 10px;
+  font-size: 12px;
   text-decoration: none;
 }
 
@@ -903,13 +908,13 @@
 .cart-header h2 {
   margin: 0;
   font-family: var(--display);
-  font-size: 26px;
+  font-size: 32px;
 }
 
 .cart-header h2 span {
   color: var(--muted);
   font-family: 'DM Mono', monospace;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .close-button {
@@ -919,7 +924,7 @@
   border-radius: 5px;
   color: #e7e7ed;
   background: #202126;
-  font-size: 21px;
+  font-size: 26px;
   line-height: 1;
   cursor: pointer;
 }
@@ -951,14 +956,19 @@
 .cart-item-info h3 {
   margin: 0 0 4px;
   font-family: var(--display);
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .cart-item-info p,
 .cart-item > strong {
   margin: 0;
   color: #aaaab5;
-  font-size: 9px;
+  font-size: 11px;
+}
+
+.cart-item-info .cart-item-included {
+  margin-top: 3px;
+  color: #8bd1ff;
 }
 
 .cart-item > strong {
@@ -984,7 +994,7 @@
 
 .quantity-control span {
   color: #d9dae3;
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .cart-summary {
@@ -996,7 +1006,7 @@
   display: flex;
   justify-content: space-between;
   margin: 0 0 7px;
-  font-size: 11px;
+  font-size: 14px;
 }
 
 .cart-summary > p strong {
@@ -1005,7 +1015,7 @@
 
 .cart-summary > small {
   color: #999aa5;
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .checkout-button {
@@ -1016,7 +1026,7 @@
   border-radius: 5px;
   color: #fff;
   background: linear-gradient(180deg, #1684ff, #0864d4);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
   cursor: pointer;
   transition: background 150ms ease, transform 150ms ease;
@@ -1040,7 +1050,7 @@
   justify-content: center;
   gap: 14px;
   color: #a1a2ad;
-  font-size: 10px;
+  font-size: 12px;
   text-align: center;
 }
 
@@ -1054,7 +1064,7 @@
   border-radius: 4px;
   color: #d9efff;
   background: #173752;
-  font-size: 9px;
+  font-size: 11px;
   cursor: pointer;
 }
 
@@ -1081,7 +1091,7 @@
   gap: 8px;
   color: #f5f5fa;
   font-family: var(--display);
-  font-size: 17px;
+  font-size: 21px;
   font-weight: 700;
   text-decoration: none;
 }
@@ -1103,7 +1113,7 @@
   justify-content: center;
   gap: 12px;
   color: #777985;
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .checkout-step.is-current {
@@ -1121,7 +1131,7 @@
   border: 0;
   color: #aaaab5;
   background: transparent;
-  font-size: 10px;
+  font-size: 12px;
   text-decoration: underline;
   cursor: pointer;
 }
@@ -1154,19 +1164,19 @@
   margin: 0;
   color: #f1f1f5;
   font-family: var(--display);
-  font-size: 31px;
+  font-size: 39px;
   line-height: 1;
 }
 
 .player-step-brand p {
   margin: 5px 0;
   color: #9c9da7;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .player-step-brand > span {
   color: #4aa9ff;
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .username-card {
@@ -1184,7 +1194,7 @@
   border-bottom: 1px solid #35363a;
   color: #f4f4f6;
   font-family: var(--display);
-  font-size: 23px;
+  font-size: 29px;
   font-weight: 700;
   text-align: center;
 }
@@ -1213,7 +1223,7 @@
   border-radius: 7px;
   color: #ededf1;
   background: #101114;
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 600;
   cursor: pointer;
 }
@@ -1224,7 +1234,7 @@
 }
 
 .platform-option > span {
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .username-input-row {
@@ -1238,7 +1248,7 @@
   border: 1px solid #111216;
   color: #f1f1f5;
   background: #111216;
-  font-size: 11px;
+  font-size: 14px;
 }
 
 .username-input-row input {
@@ -1263,7 +1273,7 @@
   border-radius: 0 5px 5px 0;
   color: white;
   background: #0876f9;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
   cursor: pointer;
 }
@@ -1273,20 +1283,20 @@
 }
 
 .username-input-row > button span {
-  font-size: 19px;
+  font-size: 24px;
   line-height: 1;
 }
 
 .username-help {
   margin: 11px 0 0;
   color: #83848e;
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .form-error {
   margin: 10px 0 0;
   color: #ff8c8c;
-  font-size: 9px;
+  font-size: 11px;
   text-align: center;
 }
 
@@ -1325,13 +1335,13 @@
 }
 
 .review-player strong {
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 500;
 }
 
 .review-player span {
   color: #8d8e98;
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .review-items {
@@ -1392,13 +1402,13 @@
 .review-item-description strong,
 .review-item-controls > strong {
   color: #f0f0f4;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 500;
 }
 
 .review-item-description span {
   color: #92939e;
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .review-item-controls {
@@ -1416,7 +1426,7 @@
   margin-top: auto;
   padding-top: 30px;
   color: #e6e6ec;
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 600;
 }
 
@@ -1427,7 +1437,7 @@
   border-radius: 3px;
   color: #777984;
   background: #242529;
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .review-total {
@@ -1442,7 +1452,7 @@
   margin: 0;
   padding: 8px 0;
   color: #b7b8c2;
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .review-total > p strong,
@@ -1455,7 +1465,7 @@
   margin-top: 2px;
   border-top: 1px solid #34353d;
   color: #f2f2f6;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -1466,7 +1476,7 @@
   border: 0;
   color: #83caff;
   background: transparent;
-  font-size: 9px;
+  font-size: 11px;
   cursor: pointer;
 }
 
@@ -1478,7 +1488,7 @@
 .recommendation-title {
   margin: 0 0 17px;
   color: #f1f1f5;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -1508,13 +1518,13 @@
 }
 
 .recommendation-item strong {
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 500;
 }
 
 .recommendation-item span {
   color: #a4a5ae;
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .recommendation-item > button {
@@ -1523,7 +1533,7 @@
   border: 1px solid #dedee2;
   color: #1c1c20;
   background: #e8e8eb;
-  font-size: 9px;
+  font-size: 11px;
   cursor: pointer;
 }
 
@@ -1539,7 +1549,7 @@
   border-radius: 2px;
   color: #081819;
   background: #42c9ca;
-  font-size: 10px;
+  font-size: 12px;
   cursor: pointer;
 }
 
@@ -1564,7 +1574,7 @@
 .payment-form-kicker {
   margin: 0 0 22px;
   color: #9a9ba6;
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.08em;
 }
 
@@ -1578,7 +1588,7 @@
   flex-direction: column;
   gap: 7px;
   color: #eeeeF2;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
 }
 
@@ -1601,7 +1611,7 @@
 .payment-methods legend {
   margin-bottom: 9px;
   color: #ededf2;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
 }
 
@@ -1617,7 +1627,7 @@
   border: 1px solid #393a40;
   color: #e3e3e8;
   background: #16171a;
-  font-size: 8px;
+  font-size: 10px;
   cursor: pointer;
 }
 
@@ -1630,7 +1640,7 @@
 .secure-provider-note {
   margin: 9px 0 0;
   color: #92939e;
-  font-size: 8px;
+  font-size: 10px;
   line-height: 1.6;
 }
 
@@ -1639,7 +1649,7 @@
   align-items: flex-start;
   gap: 9px;
   color: #c1c2cb;
-  font-size: 9px;
+  font-size: 11px;
   line-height: 1.6;
 }
 
@@ -1657,7 +1667,7 @@
   border: 0;
   color: #081819;
   background: #42c9ca;
-  font-size: 11px;
+  font-size: 14px;
   cursor: pointer;
 }
 
@@ -1671,7 +1681,7 @@
 .payment-notice {
   margin: -10px 0 0;
   color: #858791;
-  font-size: 8px;
+  font-size: 10px;
   line-height: 1.6;
 }
 
@@ -1695,13 +1705,13 @@
 .payment-order-summary h2 {
   margin: 0 0 5px;
   font-family: var(--display);
-  font-size: 19px;
+  font-size: 24px;
 }
 
 .payment-recipient {
   margin: 0 0 14px;
   color: #8f909a;
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .payment-summary-item {
@@ -1711,7 +1721,7 @@
   padding: 10px 0;
   border-top: 1px solid #303138;
   color: #b9bac3;
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .payment-summary-item strong {
@@ -1724,7 +1734,7 @@
   margin-top: 5px;
   border-top: 1px solid #45464d;
   color: #f1f1f5;
-  font-size: 11px;
+  font-size: 14px;
 }
 
 .payment-order-summary .text-back-button {
@@ -1747,7 +1757,7 @@
 
   .checkout-brand {
     gap: 6px;
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .checkout-brand img {
@@ -1761,7 +1771,7 @@
     justify-content: flex-start;
     gap: 7px;
     padding: 8px 0 10px;
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .step-divider {
@@ -1788,7 +1798,7 @@
 
   .username-card > h2 {
     padding: 17px 10px;
-    font-size: 19px;
+    font-size: 24px;
   }
 
   .username-card-content {
@@ -1860,7 +1870,7 @@
 
   .payment-method {
     min-height: 43px;
-    font-size: 9px;
+    font-size: 11px;
   }
 
   .payment-order-summary {
@@ -1875,7 +1885,7 @@
 
   .brand {
     gap: 6px;
-    font-size: 15px;
+    font-size: 19px;
   }
 
   .brand > img {
@@ -1887,7 +1897,7 @@
     min-height: 30px;
     gap: 6px;
     padding: 0 8px;
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .copy-hint {
@@ -1908,7 +1918,7 @@
   }
 
   .cart-count {
-    font-size: 9px;
+    font-size: 11px;
   }
 
   .store-main {
@@ -1925,18 +1935,22 @@
   }
 
   .section-title-row h2 {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .section-title-row p {
     max-width: 58%;
-    font-size: 7px;
+    font-size: 9px;
     text-align: right;
   }
 
   .rank-grid {
     grid-template-columns: 1fr;
     gap: 10px;
+  }
+
+  .rank-grid-single {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .rank-card {
@@ -1950,15 +1964,15 @@
 
   .rank-perks li {
     min-height: 26px;
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .rank-perks strong {
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .rank-price strong {
-    font-size: 19px;
+    font-size: 24px;
   }
 
   .shard-grid {
@@ -1986,21 +2000,21 @@
   }
 
   .crate-key-card h3 {
-    font-size: 9px;
+    font-size: 11px;
   }
 
   .crate-key-card > p {
     min-height: 26px;
-    font-size: 8px;
+    font-size: 10px;
     line-height: 1.5;
   }
 
   .crate-key-price strong {
-    font-size: 9px;
+    font-size: 11px;
   }
 
   .crate-key-price span {
-    font-size: 7px;
+    font-size: 9px;
   }
 
   .crate-key-bottom {
@@ -2023,7 +2037,7 @@
     flex: 1;
     min-height: 30px;
     padding: 0 7px;
-    font-size: 6px;
+    font-size: 8px;
   }
 
   .key-quantity-control button {
@@ -2052,11 +2066,11 @@
   }
 
   .shard-card h3 {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .shard-card h3 span {
-    font-size: 13px;
+    font-size: 16px;
   }
 
   .shard-price-button {
@@ -2065,7 +2079,7 @@
 
   .checkout-note {
     padding-bottom: 30px;
-    font-size: 7px;
+    font-size: 9px;
   }
 
   .store-footer {
